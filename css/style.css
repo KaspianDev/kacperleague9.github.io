@@ -1,0 +1,87 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+section {
+    height: 100vh;
+}
+.snap-start {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: 100%;
+}
+@media only screen and (max-width: 420px) {
+    .textbox h1 {
+        font-size: 2.675em !important;
+        word-wrap: break-word;
+    }
+    .textbox h6 {
+        font-size: 1.125em !important;
+        animation: typing 5s 2.5s backwards !important;
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+}
+@media only screen and (min-width: 1000px) {
+    .textbox h1 {
+        font-size: 4em !important;
+    }
+    .textbox h6 {
+        font-size: 1.75em !important;
+    }
+}
+body {
+    margin: 0;
+}
+.textbox {
+    text-align: center;
+    pointer-events: stroke;
+    animation: fadein 5s;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.textbox h1 {
+    font-size: 3.25em;
+}
+.textbox h6 {
+    font-size: 1.5em;
+    overflow: hidden;
+    animation: typing 10s 2.5s backwards;
+    margin: 0 auto;
+    white-space: nowrap;
+    word-wrap: normal;
+    width: 100%;
+}
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.snap-item {
+    scroll-snap-align: center;
+}
+.bg-img {
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/fELWsVN.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section-2 {
+    background-image: url('../img/fELWsVN.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
