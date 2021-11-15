@@ -1,0 +1,89 @@
+:root {
+  --part-1-color: rgb(80, 80, 80);
+  --part-2-color: rgb(65, 65, 65);
+  --part-3-color: rgb(40, 40, 40);
+  --part-4-color: rgb(25, 25, 25);
+}
+body {
+  margin: 0;
+}
+html,
+body {
+  height: 200vh;
+}
+.css-load-main {
+  height: 100vh;
+  width: 100%;
+  position: inline-block;
+}
+.css-load-part1 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: var(--part-1-color);
+  animation: css-load-animation 1.75s 0.375s forwards ease-in-out;
+  z-index: 2;
+}
+.css-load-part2 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: var(--part-2-color);
+  animation: css-load-animation 1.75s 0.175s forwards ease-in-out;
+  z-index: 3;
+}
+.css-load-part3 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: var(--part-3-color);
+  animation: css-load-animation 1.75s ease-in-out forwards;
+  z-index: 4;
+}
+.load-animate {
+  animation: css-load-animation2 1.2s 1.875s ease-in-out forwards;
+}
+.css-load-part4 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: var(--part-4-color);
+  z-index: 1;
+}
+.css-load-flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+}
+div.css-load-part4,
+i.css-load-part4 {
+  font-size: 3rem;
+}
+.css-load-circle-anim {
+  animation: css-load-rotate 1.25s ease-in-out infinite;
+}
+@keyframes css-load-animation {
+  100% {
+    transform: translateX(100vw);
+    display: none;
+    opacity: 1;
+  }
+}
+@keyframes css-load-animation2 {
+  100% {
+    transform: translateY(100vh);
+    display: none;
+    opacity: 1;
+  }
+}
+@keyframes css-load-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
